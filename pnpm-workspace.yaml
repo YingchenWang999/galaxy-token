@@ -8,6 +8,12 @@ minimumReleaseAgeExclude:
   - "hardhat@3.10.0"
 
 overrides:
+  # hardhat-verify uses only Interface here; pair the local patch with ethers v6
+  # so the vulnerable ethers v5 elliptic dependency is absent from the lockfile.
+  '@nomicfoundation/hardhat-verify>@ethersproject/abi': 'npm:ethers@^6.14.0'
   diff: 8.0.3
   lodash-es: 4.18.1
   serialize-javascript: 7.0.7
+
+patchedDependencies:
+  '@nomicfoundation/hardhat-verify@3.0.21': patches/@nomicfoundation__hardhat-verify@3.0.21.patch

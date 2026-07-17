@@ -27,7 +27,7 @@ pnpm install
 pnpm run check
 ```
 
-`check` 会依次执行 TypeScript 类型检查、生产配置编译、完整测试和高危依赖审计。
+`check` 会依次执行 TypeScript 类型检查、生产配置编译、完整测试、Hardhat Verify 补丁回归检查和全等级依赖审计。任何已知依赖漏洞都会使检查失败。
 
 编译生产优化版本：
 
@@ -56,9 +56,7 @@ pnpm run compile --build-profile production
 5. 部署：
 
    ```bash
-   pnpm run deploy:base-sepolia \
-     --parameters ignition/parameters/baseSepolia.json \
-     --build-profile production
+   pnpm run deploy:base-sepolia
    ```
 
 Ignition 会显示部署后的合约地址。请在 BaseScan 测试网浏览器中检查：名称、符号、小数位、总供应量和初始持有人余额。
@@ -81,9 +79,7 @@ pnpm run verify:base-sepolia
 6. 部署：
 
    ```bash
-   pnpm run deploy:base-mainnet \
-     --parameters ignition/parameters/baseMainnet.json \
-     --build-profile production
+   pnpm run deploy:base-mainnet
    ```
 
 7. 记录交易哈希和合约地址，然后验证源码：

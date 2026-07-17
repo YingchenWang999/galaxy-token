@@ -1,0 +1,43 @@
+diff --git a/dist/src/internal/constructor-args.d.ts b/dist/src/internal/constructor-args.d.ts
+index d746b89463ed31b61a9fccd33025523bf76434f3..6e50003483cb07b4b0adf31237adf8da389e8677 100644
+--- a/dist/src/internal/constructor-args.d.ts
++++ b/dist/src/internal/constructor-args.d.ts
+@@ -1,4 +1,4 @@
+-import type { JsonFragment } from "@ethersproject/abi";
++import type { JsonFragment } from "ethers";
+ /**
+  * Encodes constructor arguments for a contract using its ABI.
+  *
+diff --git a/dist/src/internal/constructor-args.js b/dist/src/internal/constructor-args.js
+index da4c0e96d89cadc9377a1b2aa6707de38277ee20..df957abdae24559d57db1be0da91fcbf4cf2e1c9 100644
+--- a/dist/src/internal/constructor-args.js
++++ b/dist/src/internal/constructor-args.js
+@@ -1,4 +1,4 @@
+-import { Interface } from "@ethersproject/abi";
++import { Interface } from "ethers";
+ import { HardhatError } from "@nomicfoundation/hardhat-errors";
+ import { ensureError } from "@nomicfoundation/hardhat-utils/error";
+ import { getUnprefixedHexString } from "@nomicfoundation/hardhat-utils/hex";
+diff --git a/package.json b/package.json
+index bacccaf04366cb674546e2986d35a5764920875e..7d38d595f9e951cb8776cad1fee95be5cda5d33b 100644
+--- a/package.json
++++ b/package.json
+@@ -48,7 +48,7 @@
+     "@nomicfoundation/hardhat-test-utils": "^2.0.3"
+   },
+   "dependencies": {
+-    "@ethersproject/abi": "^5.8.0",
++    "ethers": "^6.14.0",
+     "@nomicfoundation/hardhat-errors": "^3.0.16",
+     "@nomicfoundation/hardhat-utils": "^4.1.4",
+     "@nomicfoundation/hardhat-zod-utils": "^3.0.5",
+diff --git a/src/internal/constructor-args.ts b/src/internal/constructor-args.ts
+index bd53e6c70d551c0350dd68ef6ed6cc62c3d06eca..96145ba9e3719d9eba9f06dcacf24f26af0b9c48 100644
+--- a/src/internal/constructor-args.ts
++++ b/src/internal/constructor-args.ts
+@@ -1 +1 @@
+-import type { JsonFragment } from "@ethersproject/abi";
++import type { JsonFragment } from "ethers";
+@@ -3 +3 @@
+-import { Interface } from "@ethersproject/abi";
++import { Interface } from "ethers";
