@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ES2023",
+    "types": ["node", "mocha"]
+  },
+  "include": ["hardhat.config.ts", "ignition/**/*.ts", "test/**/*.ts"],
+  "exclude": ["artifacts", "cache", "node_modules", "types", "work"]
+}

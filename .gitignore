@@ -1,0 +1,14 @@
+node_modules/
+artifacts/
+cache/
+coverage/
+ignition/deployments/
+typechain-types/
+types/
+
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
