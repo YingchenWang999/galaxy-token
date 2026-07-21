@@ -1,6 +1,15 @@
 # Galaxy (GXLY)
 
-Galaxy 是一个固定总量、不可升级、没有管理员特权的 ERC-20 代币项目。
+<p align="center">
+  <img src="assets/gxly-logo.png" alt="Galaxy (GXLY) logo" width="160" height="160">
+</p>
+
+Galaxy 是部署在 Base 主网的固定总量、不可升级、没有管理员特权的 ERC-20 代币项目。GXLY 定位为银河联邦主题生态的专用货币。
+
+Galaxy is a fixed-supply, non-upgradeable ERC-20 token deployed on Base Mainnet without administrator privileges. GXLY is designed as the currency of the Galactic Federation-themed ecosystem.
+
+- 官网 / Website: [galaxy-token-web.vercel.app](https://galaxy-token-web.vercel.app)
+- BaseScan: [`0x405a51da0717c1671f90a48c48672b41E22e072e`](https://basescan.org/token/0x405a51da0717c1671f90a48c48672b41E22e072e)
 
 ## 已确认参数
 
