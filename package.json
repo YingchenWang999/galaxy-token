@@ -12,16 +12,17 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "typecheck": "tsc --noEmit",
-    "check": "pnpm run typecheck && pnpm run compile --build-profile production && pnpm test && pnpm run check:verify-patch && pnpm audit",
+    "check": "pnpm run typecheck && pnpm run compile --build-profile production && pnpm test && pnpm run check:verify-patch && pnpm run check:network-scripts && pnpm audit",
     "check:verify-patch": "node scripts/check-verify-patch.mjs",
+    "check:network-scripts": "node scripts/check-network-scripts.mjs",
     "test:solidity": "hardhat test solidity",
     "deploy:local": "hardhat ignition deploy ignition/modules/Galaxy.ts --network hardhatOp --parameters ignition/parameters/local.json --build-profile production",
     "deploy:base-sepolia": "hardhat ignition deploy ignition/modules/Galaxy.ts --network baseSepolia --parameters ignition/parameters/baseSepolia.json --build-profile production",
     "deploy:base-sepolia:reset": "hardhat ignition deploy ignition/modules/Galaxy.ts --network baseSepolia --parameters ignition/parameters/baseSepolia.json --build-profile production --reset",
-    "verify:base-sepolia": "hardhat ignition verify chain-84532",
+    "verify:base-sepolia": "hardhat ignition verify chain-84532 --network baseSepolia",
     "preflight:base-mainnet": "node scripts/preflight.mjs",
     "deploy:base-mainnet": "pnpm run preflight:base-mainnet && hardhat ignition deploy ignition/modules/Galaxy.ts --network baseMainnet --parameters ignition/parameters/baseMainnet.json --build-profile production",
-    "verify:base-mainnet": "hardhat ignition verify chain-8453"
+    "verify:base-mainnet": "hardhat ignition verify chain-8453 --network baseMainnet"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^4.0.15",

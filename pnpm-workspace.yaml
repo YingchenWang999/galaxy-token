@@ -8,6 +8,9 @@ minimumReleaseAgeExclude:
   - "hardhat@3.10.0"
 
 overrides:
+  # Hardhat only uses AdmZip to extract downloaded solc builds. Force the
+  # patched release because Hardhat's current range still resolves to 0.4.x.
+  'hardhat>adm-zip': 0.6.0
   # hardhat-verify uses only Interface here; pair the local patch with ethers v6
   # so the vulnerable ethers v5 elliptic dependency is absent from the lockfile.
   '@nomicfoundation/hardhat-verify>@ethersproject/abi': 'npm:ethers@^6.14.0'

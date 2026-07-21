@@ -1,5 +1,11 @@
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
+import { loadEnvFile } from "node:process";
 import { isAddress, ZeroAddress } from "ethers";
+
+if (existsSync(".env")) {
+  loadEnvFile(".env");
+}
 
 const parametersPath = new URL(
   "../ignition/parameters/baseMainnet.json",

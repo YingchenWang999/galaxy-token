@@ -1,5 +1,11 @@
 import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
+import { existsSync } from "node:fs";
+import { loadEnvFile } from "node:process";
 import { configVariable, defineConfig } from "hardhat/config";
+
+if (existsSync(".env")) {
+  loadEnvFile(".env");
+}
 
 export default defineConfig({
   plugins: [hardhatToolboxMochaEthersPlugin],
